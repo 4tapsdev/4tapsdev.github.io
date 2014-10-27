@@ -4,8 +4,7 @@
 	color:#777;
 	display:block;
 	vertical-align:bottom;
-	background-color:#2B2B2B;
-	border-top:#252525 5px solid;
+	background-color:rgba(0,0,0,0.1);
 	z-index:101;
 }
 #footer.bottom {
@@ -22,7 +21,7 @@
 	margin-bottom:10px;
 }
 #footer .spaced {
-	padding:60px 15px;
+	padding:30px 15px 15px;
 }
 #footer .logo_footer {
 	padding:40px 15px;
@@ -35,7 +34,7 @@
 #footer h2,
 #footer h3,
 #footer h4 {
-	color:#fff;
+	color:#353535;
 }
 
 #footer .copyright {
@@ -124,7 +123,40 @@
 #footer ul.nobordered li a>i.fa{
 	padding-right:6px;
 }
-
+.posts .dl-horizontal a {
+	color: #777;
+}
+.posts .dl-horizontal {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.posts .dl-horizontal dt {
+    float: left;
+    width: 60px;
+}
+.posts .dl-horizontal dt img {
+    border: 1px solid #aaa;
+    height: 60px;
+    margin-top: 2px;
+    padding: 2px;
+    width: 60px;
+}
+.posts .dl-horizontal dd {
+    margin-left: 70px;
+}
+.posts .dl-horizontal dd p {
+    margin: 0;
+}
+.posts .dl-horizontal dd a {
+    font-size: 14px;
+    line-height: 16px !important;
+}
+.posts .dl-horizontal dd a:hover {
+    text-decoration: none;
+}
+.posts .dl-horizontal:hover dt img, .posts .dl-horizontal:hover dd a {
+    transition: all 0.4s ease-in-out 0s;
+}
 /** Responsive
  **************************************************************** **/
 @media only screen and (max-width: 768px) {

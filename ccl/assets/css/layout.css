@@ -575,7 +575,9 @@ section.brands {
 }
 .tab-post .tab-post-link {
 	font-size:13px;
-	line-height:13px;
+	line-height:14px;
+	display: inline-block;
+	margin-top: -2px;
 }
 .tab-post small {
 	display:block;
@@ -946,8 +948,13 @@ section.brands {
 	border:0; padding:0;
 	background:rgba(0,0,0,0.03);
 }
+	.partners .box-content.thumbnail{
+		background: none;
+		border: none;
+		padding-top: 10px;
+	}
 .box-content.thumbnail:hover {
-	background:rgba(0,0,0,0.08);
+	/*background:rgba(0,0,0,0.08);*/
 	border:0 !important;
 }
 .box-content.thumbnail .item-image {
@@ -957,7 +964,8 @@ section.brands {
 }
 .box-content.thumbnail  h3 {
 	position:absolute;
-	bottom:10px; left:0;
+	bottom:0; 
+	left:0;
 	text-align:left;
 	font-size:18px;
 	line-height:18px;
@@ -969,7 +977,7 @@ section.brands {
 .box-content.thumbnail  h3 span {
 	display:inline-block;
 	background-color:rgba(0,0,0,0.8);
-	padding:10px 10px 20px 10px;
+	padding:10px 10px 13px 10px;
 }
 .box-content.thumbnail  h3 small {
 	display:inline-block; color:#333;
@@ -1567,4 +1575,37 @@ body.boxed .onepage-slider-offset {
 	display: block;
 	font-size: 30px;
 	margin-bottom: 10px;
+}
+/*----------------- Additional css for CSL -------------------*/
+.reviews-item{
+	margin-bottom: 40px;
+}
+.controlls-over .owl-pagination{
+	bottom: -400%;
+}
+.brands .controlls-over .owl-controls {
+		height: 0;
+		margin-top: 0;
+	}
+.brands	.controlls-over .owl-controls .owl-prev {
+		float:none;
+		position:absolute;
+		top:50%; 
+		left:0; 
+		bottom:0;
+		margin-top:-20px;
+		height:30px;
+	}
+.brands	.controlls-over .owl-controls .owl-next {
+		float:none;
+		position:absolute;
+		top:50%; 
+		right:0; 
+		bottom:0;
+		margin-top:-20px;
+		height:30px;
+	}
+.project-date{
+	margin-top: -20px;
+	margin-bottom: 20px;
 }

@@ -19,7 +19,7 @@ body.boxed #topBar {
 	border-bottom-right-radius: 0;
 }
 #topNav a.logo {
-	margin:3px 15px 3px 0;
+	margin:11px 100px 10px 0;
 	display:inline-block;
 	min-height:50px;
 	float:left;
@@ -85,7 +85,7 @@ body.boxed #topBar {
 
 #topNav ul.nav>li a {
 	color:#666;
-	padding: 15px 23px;
+	padding: 29px 22px;
 	position: relative;
 	text-decoration: none;
 	font-size:14px;
@@ -342,7 +342,7 @@ body.boxed #topBar {
  **************************************************************** **/
 #barMain {
 	float:right;
-	margin-top:6px;
+	/*margin-top:6px;*/
 	font-size:12px;
 }
 
