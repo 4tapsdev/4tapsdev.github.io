@@ -39,7 +39,7 @@ html {
 
 body{
     font: 2.1rem/3rem "pancetta_proregular";
-    background: url("../images/bg/background@2x.png") repeat 0 0 / 1024px 768px;
+    background: url("../images/bg/background@2x.jpg") repeat 0 0 / 50px 50px;
     height: 100%;
 }
 
@@ -61,6 +61,27 @@ img{
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited{
+    color: inherit;
+}
+
+.hidden{
+    display: none;
+}
+
+.align-left{
+    float: left;
+}
+
+.align-right{
+    float: right;
 }
 
 /*   Fonts kit*/
@@ -197,9 +218,10 @@ img{
     }
 .carousel-content table{
     width: 100%;
+    text-align: justify;
 }
 .carousel-content table.half{
-    width: 50.7%;
+    width: 48.4%;
 }
     table td.col{
         width: 48.3%;
@@ -210,12 +232,7 @@ img{
         float: left;
     }
         .carousel-content p{
-            letter-spacing: .14px;
-        }
-        @media screen and (-webkit-min-device-pixel-ratio:0) {
-            .carousel-content p{
-                letter-spacing: .06px;
-            }
+            word-spacing: -1.4px;
         }
             .word-bg{
                 background: #e4ccb4;
@@ -237,17 +254,17 @@ img{
                 top: -12px;
                 width: 87px;
             }
-            .align-center{
-                display: block;
-                text-align: center;
-            }
+        .align-center {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
         .content-figure {
-
             text-align: center;
         }
             .content-figure img{
                 border: 1px solid #d9c4af;
-                margin: 6px 0 23px;
+                margin: 6px 0 14px;
                 padding: 4px;
                 display: inline-block;
             }
@@ -259,7 +276,8 @@ img{
     margin: auto;
     position: relative;
     width: 123px;
-}.page-decor_2{
+}
+.page-decor_2{
      background: url("../images/bg/all.png") no-repeat scroll 0 -203px rgba(0, 0, 0, 0);
      display: block;
      height: 85px;
@@ -272,25 +290,6 @@ footer{
     margin: 32px 0 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  Internal Slider style*/
 
 .internal-slider{
@@ -302,17 +301,49 @@ footer{
     padding: 0 0 0 4px;
     border-left: 1px solid #d9c4af;
 }
+    .internal-slider .slide1{
+        background: url("../images/src/slide1.jpg") no-repeat 0 0 /cover;
+        height: 100%;
+    }
+        .glb{
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            right: 22px;
+            top: 22px;
+            background: url("../images/bg/Globe-icon.gif") no-repeat;
+            font: 0px/0 a;
+        }
 
-.internal-slider .slide1{
-    background: url("../images/src/slide1.jpg") no-repeat 0 0 /cover;
-    height: 100%;
+/*  Description popup*/
+
+.desc_popup .fancybox-skin{
+    background: #fffbe2;
+    border-radius: 8px;
 }
+    .popup-content p{
+        overflow: hidden;
+    }
+    .popup-content img{
+        padding: 4px;
+        border: 1px solid #d9c4af;
+    }
+    .popup-content strong{
+        font-family: 'pancetta_serif_proregular',serif;
+        font-weight: bold;
+    }
+        .popup-content .align-right{
+             margin: 3px 0 3px 15px;
+        }
+        .popup-content .align-left{
+            margin: 3px 15px 3px 0;
+        }
 
-.glb{
-    width: 44px;
-    height: 44px;
-    position: absolute;
-    right: 22px;
-    top: 22px;
-    background: url("../images/bg/Globe-icon.gif") no-repeat;
+/*  Google-map popup*/
+
+.gmnoprint img{
+    max-width: inherit;
+}
+.gm-style-cc[draggable="false"]{
+    display: none;
 }
