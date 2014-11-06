@@ -3,8 +3,8 @@ $(function() {
     /*- Promo Carousel -*/
 
     $(".global-carousel").owlCarousel({
-        slideSpeed : 300,
-        paginationSpeed : 400,
+        slideSpeed : 450,
+        paginationSpeed : 500,
         singleItem:true
     });
 
