@@ -293,7 +293,7 @@ if (typeof Object.create !== "function") {
 
 
             $(window).load(function() {
-                $activeItem.css('margin-top' , $activeImg.height() / 2 - $activeItemHeight);
+               /* $activeItem.css('margin-top' , $activeImg.height() / 2 - $activeItemHeight);*/
                 $activeItem2.css('margin-top' , $activeImg.height() / 2 - $activeItemHeight2);
             });
 
@@ -1058,6 +1058,7 @@ if (typeof Object.create !== "function") {
                         handlers = $._data(ev.target, "events").click;
                         owlStopEvent = handlers.pop();
                         handlers.splice(0, 0, owlStopEvent);
+
                     }
                 }
                 swapEvents("off");
@@ -1510,7 +1511,7 @@ if (typeof Object.create !== "function") {
         responsiveRefreshRate : 200,
         responsiveBaseWidth : window,
 
-        baseClass : "owl-carousel",
+        baseClass : "internal-slider",
         theme : "owl-theme",
 
         lazyLoad : false,
@@ -1522,11 +1523,11 @@ if (typeof Object.create !== "function") {
         jsonPath : false,
         jsonSuccess : false,
 
-        dragBeforeAnimFinish : true,
+        dragBeforeAnimFinish : false,
         mouseDrag : true,
         touchDrag : true,
 
-        addClassActive : false,
+        addClassActive : true,
         transitionStyle : false,
 
         beforeUpdate : false,

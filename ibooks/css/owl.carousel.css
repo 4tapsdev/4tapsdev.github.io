@@ -45,14 +45,14 @@ div.owl-carousel{
 .owl-controls .owl-buttons div{
 	cursor: pointer;
 }
-/*.owl-controls {
+.owl-controls {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}*/
+}
 
 /* mouse grab icon */
 /*.grabbing {
@@ -75,18 +75,25 @@ div.owl-carousel{
     left: 0;
     right: 0;
     bottom: 16px;
+    text-align: center;
+    display: none !important;
+}
+.internal-slider .internal-slider .owl-controls{
+    display: block !important;
+}
+.owl-pagination{
+    margin-top: -6px;
 }
 
 .owl-pagination .owl-page{
     display: inline-block;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    border: 5px solid transparent;
-    background: url("../images/bg/all.png") -36px -160px transparent;
+    width: 10px;
+    height: 10px;
+    background: url("../images/bg/all.png") no-repeat 0 -525px transparent;
     vertical-align: middle;
+    margin: 0 3.5px 0;
 }
 .owl-pagination .owl-page.active{
-    background-position: -19px -160px;
+    background-position: 0 -467px;
 }
 
