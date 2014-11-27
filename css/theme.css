@@ -333,7 +333,6 @@ body .fus-btns .btn {
 }
 .fus-tab-content {
     padding: 35px 0;
-    margin: 35px 0;
 }
 .fus-tab-content p {
     color: #808184;
@@ -638,6 +637,9 @@ body.fus-black .btn-primary:hover {
 }
 body.fus-black .fus-tabs li.active a .fus-subtitle {
     color: #333;
+}
+body.fus-black .fus-tabs-white li.active a .fus-subtitle {
+    color: #fff;
 }
 body.fus-black .navbar.fus-navbar-solid {
     background: rgba(0, 0, 0, .43);
