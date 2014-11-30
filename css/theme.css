@@ -707,8 +707,7 @@ body.fus-black .navbar.fus-navbar-solid {
     body .fus-as-seen>a {
         margin-bottom: 10px;
     }
-    body .fus-tab-content>.tab-pane>.row>[class*=col-].fus-photo img {
-        max-width: 100%}
+    body .fus-tab-content>.tab-pane>.row>[class*=col-].fus-photo img {}
     body footer ul>li>a {
         margin-bottom: 0;
         display: inline-block;
