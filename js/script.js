@@ -10,5 +10,5 @@ function projectSwitcher(tabs, time){
 
 $(document).ready(function(){
     projectSwitcher($("#feature-tabs").find("li"), 5000);
-    projectSwitcher($("#entertainment-tabs").find("li"), 600000);
+    projectSwitcher($("#entertainment-tabs").find("li"), 10000);
 });
