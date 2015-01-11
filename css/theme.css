@@ -323,7 +323,7 @@ body .fus-btns .btn {
     background: #333;
 }
 .fus-tabs-white > li.active > a{
-    background: none;
+    background: none !important;
 }
 .fus-tabs-white > li.active > a:hover{
     background: none;
