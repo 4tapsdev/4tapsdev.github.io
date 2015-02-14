@@ -182,6 +182,10 @@
 		padding: 4em 0;
 	}
 
+    #logo-img {
+        display: none;
+    }
+
 /* Footer */
 
 	#footer section {
