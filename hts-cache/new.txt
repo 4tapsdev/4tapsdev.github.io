@@ -1,4 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-12:53:03	224/224	---M--	200	added ('OK')	text/plain	etag:%22e0-58f966ffc2666%22	http://project1537337.tilda.ws/robots.txt		(from )
-12:53:04	26033/26033	---M--	200	added ('OK')	text/html	etag:%2265b1-5940ef0ac30d8%22	http://project1537337.tilda.ws/	C:/Users/%d0%9f%d0%b0%d0%b2%d0%b5%d0%bb/Desktop/4taps3/4taps5/project1537337.tilda.ws/index.html	(from )
-12:53:04	42750/-1	---M--	200	added ('OK')	image/jpeg	date:Thu,%2029%20Aug%202019%2021:05:48%20GMT	https://static.tildacdn.com/tild6636-6336-4336-a635-346232646466/-/resize/504x/annie-spratt-608001-.jpg	C:/Users/%d0%9f%d0%b0%d0%b2%d0%b5%d0%bb/Desktop/4taps3/4taps5/static.tildacdn.com/tild6636-6336-4336-a635-346232646466/-/resize/504x/annie-spratt-608001-.jpg	(from http://project1537337.tilda.ws/)
