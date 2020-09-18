@@ -1,0 +1,33 @@
+@import "../functions/rem";
+@import "../variables/variables";
+
+
+@mixin font-size($size, $line_height:0) {
+  @if $size != 0 {
+    font-size: rem($size);
+  }
+
+  @if $line_height != 0 {
+    line-height: $line_height / $size;
+  }
+}
+
+@mixin zero_fontsize() {
+  font-size: 0;
+}
+
+@mixin fontsize_section_label() {
+  line-height: 152%;
+  @include font-size(24px);
+  @include for-tablet-landscape-up() {
+    @include font-size(27px);
+  }
+  @include for-desktop-up() {
+    @include font-size(30px);
+  }
+}
+
+@mixin fontsize_plain_text() {
+  @include font-size(18px);
+  line-height: 156.5%;
+}

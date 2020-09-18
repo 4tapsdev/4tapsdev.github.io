@@ -1,0 +1,197 @@
+@import "../deps";
+
+
+$case_full_bg: $media-desktop;
+$case_stack: 620px;
+
+
+.case-review {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  color: $black;
+
+  .case-review-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  @include media_interval(0, $case_stack) {
+    flex-direction: column;
+  }
+  @include media_interval(0, $case_full_bg) {
+    border-radius: 0;
+  }
+  @include media_interval($media-tablet-portrait, $case_full_bg) {
+    margin-right: -$grid-gutter-width-tablet;
+    margin-left: -$grid-gutter-width-tablet;
+  }
+  @include media_interval(0, $media-tablet-portrait) {
+    margin-bottom: 26px;
+    margin-right: -$grid-gutter-width-mobile;
+    margin-left: -$grid-gutter-width-mobile;
+  }
+
+  .case-review-left {
+    padding: 35px 6% 25px 80px;
+    box-sizing: border-box;
+
+    //display: flex;
+    //align-items: flex-end;
+
+    @include media_interval($media-tablet-landscape, 0) {
+      width: 55%;
+    }
+    @include media_interval($media-tablet-landscape, $media-desktop) {
+      padding-left: 90px;
+      padding-right: 0;
+    }
+    @include media_interval($case_stack, $media-tablet-landscape) {
+      width: 50%;
+      padding-left: 50px;
+      padding-right: 0;
+    }
+    @include media_interval($media-tablet-portrait, $case_stack) {
+      @include hpad($grid-gutter-width-tablet);
+    }
+    @include media_interval(0, $media-tablet-portrait) {
+      @include hpad($grid-gutter-width-mobile);
+    }
+  }
+
+  .case-review-right {
+    @include media_interval($media-tablet-landscape, 0) {
+      width: 45%;
+    }
+    @include media_interval($case_stack, $media-tablet-landscape) {
+      width: 50%;
+    }
+    @include media_interval(0, $case_stack) {
+      display: flex;
+      justify-content: flex-end;
+      height: 350px;
+    }
+
+    picture {
+      height: 100%;
+      @include media_interval($case_stack, 0) {
+        width: 100%;
+      }
+    }
+    .case-img {
+      height: 100%;
+      object-fit: cover;
+      object-position: left top;
+      //transform: translateZ(0); // fix img blurry
+      image-rendering: -webkit-optimize-contrast; // fix chrome img blurry
+
+      &.centrize-mobile {
+        @include media_interval(0, $case_stack) {
+          object-position: center top;
+        }
+      }
+    }
+  }
+
+  .case-head-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    @include for-phone-only() {
+      margin-bottom: 14px;
+    }
+    @include media_interval($case_full_bg, 0) {
+      margin-left: 4px;
+    }
+
+    .case-icon {
+      max-width: 60px;
+      @include for-phone-only() {
+        max-width: 40px;
+      }
+    }
+
+    .case-title {
+      font-weight: 800;
+      line-height: 152%;
+      margin-left: 22px;
+      @include font-size(24px);
+      @include for-phone-only() {
+        margin-left: 14px;
+      }
+      @include for-tablet-landscape-up() {
+        @include font-size(28px);
+      }
+      @include for-desktop-up() {
+        @include font-size(32px);
+      }
+    }
+  }
+
+  .case-desc-box {
+    max-width: 336px;
+    @include media_interval($case_full_bg, 0) {
+      margin-left: 4px;
+      max-width: 316px;
+    }
+
+    .case-desc {
+      @include font-size(16px, 24px);
+    }
+  }
+
+  .case-review-box {
+    opacity: .8;
+    margin-top: 20px;
+    max-width: 401px;
+    @include for-phone-only() {
+      margin-top: 27px;
+    }
+
+    .review-body {
+      font-weight: 500;
+      font-style: italic;
+      line-height: 140%;
+      @include font-size(16px);
+
+      @include for-tablet-landscape-up() {
+        position: relative;
+
+        &:before {
+          content: '“';
+          @include font-size(50px);
+          position: absolute;
+          top: 12px;
+          left: -32px;
+        }
+      }
+    }
+
+    .review-person {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 9px;
+      //line-height: 156.5%;
+      @include font-size(14px, 19px);
+      @include for-phone-only() {
+        margin-top: 7px;
+      }
+
+      .reviewer {
+        font-weight: 800;
+        margin-right: 10px;
+      }
+
+      .reviewer-position {
+
+      }
+    }
+  }
+}

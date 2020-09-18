@@ -1,0 +1,91 @@
+@import "deps";
+@import "reset";
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  color: $text-color;
+  line-height: 1;
+  @include zero_fontsize;
+  font-weight: 600;
+}
+
+#app-page {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#app-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-height: inherit;
+  position: relative;
+
+  .container {
+    width: 100%;
+    max-width: $grid-max-width;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $grid-gutter-width-mobile;
+    padding-right: $grid-gutter-width-mobile;
+
+    @include for-tablet-portrait-up() {
+      padding-left: $grid-gutter-width-tablet;
+      padding-right: $grid-gutter-width-tablet;
+    }
+    @include for-desktop-up() {
+      padding-left: $grid-gutter-width;
+      padding-right: $grid-gutter-width;
+    }
+  }
+}
+
+#app-main {
+  position: relative;
+  z-index: 1;
+}
+
+.text-container {
+  max-width: 650px;
+}
+
+
+// горизонтальные отступы
+.inner-padding {
+  @include for-tablet-landscape-up() {
+    @include hpad($inner-padding-tablet);
+  }
+  @include for-desktop-up() {
+    @include hpad($inner-padding);
+  }
+}
+
+.inner-padding-left {
+  @include for-tablet-landscape-up() {
+    padding-left: $inner-padding-tablet;
+  }
+  @include for-desktop-up() {
+    padding-left: $inner-padding;
+  }
+}
+
+// текст
+.section-label {
+  @include fontsize_section_label;
+  margin-bottom: 25px;
+  font-weight: 800;
+  @include for-phone-only() {
+    margin-bottom: 15px;
+  }
+}
+
+.plain-text {
+  @include fontsize_plain_text;
+}

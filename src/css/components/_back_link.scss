@@ -1,0 +1,31 @@
+@import "../deps";
+
+
+$mobile_offset: (1.4px 6.2px); // top right
+$mobile_padding: (10px 8px);
+
+
+.back-link-cross {
+  position: fixed;
+  z-index: 1;
+  width: 13.2px;
+  top: $header_top_offset_mobile - nth($mobile_offset, 1);
+  right: $grid-gutter-width-mobile - nth($mobile_offset, 2);
+  padding: nth($mobile_padding, 1) nth($mobile_padding, 2);
+  cursor: pointer;
+
+  @include for-tablet-portrait-up() {
+    top: $header_top_offset_tablet - nth($mobile_offset, 1);
+    right: $grid-gutter-width-tablet - nth($mobile_offset, 2);
+  }
+  @include for-desktop-up() {
+    padding: 0;
+    width: 25px;
+    top: 69px;
+    right: 74px;
+  }
+
+  &:hover {
+    opacity: .7;
+  }
+}

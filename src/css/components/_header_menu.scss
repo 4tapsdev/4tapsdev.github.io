@@ -1,0 +1,203 @@
+@import "../deps";
+
+
+// показ бургера в хедере
+$media_burger: $media-desktop;
+
+
+// шрифт пунктов меню
+.menu {
+  @include zero_fontsize;
+
+  li {
+
+    a {
+      display: inline-block;
+      padding: 5px;
+      @include font-size(16px, 19px);
+      font-weight: 500;
+
+      &.active {
+        cursor: default;
+      }
+
+      &:not(.active):hover {
+        opacity: .7;
+      }
+    }
+
+    &.contact {
+      color: $white;
+      background-color: $blue;
+      border-radius: 33px;
+
+      a {
+        padding: 7px 18px 8px;
+      }
+    }
+  }
+}
+
+// десктоп меню в хедере
+.main-menu {
+  display: inline-block;
+  transition: opacity .2s;
+  opacity: 0;
+  pointer-events: none;
+
+  @include media_interval(0, $media_burger) {
+    display: none;
+  }
+
+  .header-on-top & {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .1s;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 35px;
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    .active {
+      color: $blue;
+    }
+  }
+}
+
+// окошко меню в хедере
+$window_background: $white;
+$window_hover_color: rgba($text_color, .7);
+$window_active_color: $blue;
+
+.header-menu {
+  position: relative;
+
+  @include media_interval($media_burger, 0) {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    pointer-events: all;
+    transition: opacity .2s;
+    opacity: 1;
+
+    .header-on-top & {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .1s;
+    }
+  }
+}
+
+.header-menu-window {
+  overflow: hidden;
+  position: absolute;
+  right: -11.64px;
+  top: -13.64px;
+  display: none;
+  contain: paint;
+  min-width: 163px;
+  padding: 21px 35px 28px 21px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 1;
+  text-align: left;
+  background: $window_background;
+  box-shadow: 0px 4px 12px rgba($black, 0.25);
+  list-style: none;
+  //transition: left 0.4s;
+
+  .header-menu-open & {
+    display: block;
+  }
+
+  li {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+
+      &:hover {
+        color: $window_hover_color;
+      }
+      &.active {
+        color: $window_active_color;
+      }
+    }
+  }
+}
+
+// кнопка меню в хедере
+$menu_burger_color: $blue;
+$menu_burger_color_main_page: $white;
+$menu_burger_width: 16px;
+$menu_burger_line_height: 2px;
+$menu_burger_line_space: 4px;
+
+#header-menu-button {
+  margin-left: 30px;
+  margin-right: -8px;
+  display: inline-block;
+  padding: 8px;
+  position: relative;
+  z-index: 60;
+  cursor: pointer;
+  text-align: left;
+  vertical-align: middle;
+  user-select: none;
+
+  .burger {
+    position: relative;
+    width: $menu_burger_width;
+    height: 3 * $menu_burger_line_height + 2 * $menu_burger_line_space;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: $menu_burger_line_height;
+      border-radius: 1px;
+      background: $menu_burger_color;
+      transition-timing-function: linear;
+    }
+    &:before {
+      top: 0;
+      box-shadow: $menu_burger_color 0 ($menu_burger_line_height + $menu_burger_line_space) 0 0;
+      transform: translate3d(0, 0, 0) rotate(0deg);
+      transition-property: transform, box-shadow, top;
+      transition-duration: 0.225s, 0.1s, 0.1s;
+      transition-delay: 0s, 0.175s, 0.175s;
+    }
+    &:after {
+      top: 100%;
+      transform: translate3d(0, -100%, 0) rotate(0deg);
+      transition-property: transform, top;
+      transition-duration: 0.225s, 0.1s;
+      transition-delay: 0s, 0.175s;
+    }
+
+    .header-menu-open & {
+      pointer-events:all;
+
+      &:before {
+        top: 50%;
+        box-shadow: transparent 0 0 0 0;
+        transform: translate3d(0, -50%, 0) rotate(225deg);
+        transition-delay: 0.05s, 0.05s, 0s;
+      }
+      &:after {
+        top: 50%;
+        transition-delay: 0.05s, 0s;
+        transform: translate3d(0, -50%, 0) rotate(315deg);
+      }
+    }
+  }
+}

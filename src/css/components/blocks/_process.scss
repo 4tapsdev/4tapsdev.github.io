@@ -1,0 +1,189 @@
+@import "../../deps";
+
+
+$steps_gap: 70px;
+$steps_gap_mobile: 40px;
+$steps_mobile: $media-tablet-landscape;
+
+$triangle_w: 15px;
+$triangle_h: 17.32px;
+
+
+#process-section {
+  padding-bottom: 84px;
+  @include for-tablet-landscape-up() {
+    padding-bottom: 100px;
+  }
+  @include for-desktop-up() {
+    padding-bottom: 118px;
+  }
+
+  .process-inner {
+    .plain-text {
+      font-weight: 500;
+    }
+
+    .hint {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      opacity: .4;
+
+      @include media_interval(0, $steps_mobile) {
+        display: none;
+      }
+
+      .hint-icon {
+        width: 16px;
+        height: 17px;
+      }
+
+      .hint-text {
+        margin-left: 7px;
+        font-weight: 500;
+        @include font-size(14px);
+        line-height: 156.5%;
+      }
+    }
+
+    .steps {
+      margin-top: 44px;
+      counter-reset: step;
+      @include for-phone-only() {
+        margin-top: 26px;
+      }
+
+      @include media_interval($steps_mobile, 0) {
+        display: flex;
+      }
+
+      .step {
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid $sky;
+        border-radius: 10px;
+        transition: border .2s, background-color .2s;
+
+        @include media_interval($steps_mobile, 0) {
+          cursor: pointer;
+          padding: 16px 19px 12px;
+          margin-right: $steps_gap;
+          flex: 1 0 auto;
+
+          .step-inner {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+            // counters desktop
+            &:before {
+              display: inline-block;
+              margin-bottom: 7px;
+              counter-increment: step;
+              content: counter(step);
+              @include font-size(64px);
+              color: rgba($blue, .4);
+            }
+          }
+        }
+        @include media_interval(0, $steps_mobile) {
+          padding: 11px 24px 9px 20px;
+          margin-bottom: $steps_gap_mobile;
+
+          .step-inner {
+            // counters mobile
+            &:before {
+              counter-increment: step;
+              content: counter(step)". ";
+              @include fontsize_plain_text;
+              font-weight: 800;
+            }
+          }
+        }
+
+        // last step
+        &:last-of-type {
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+
+        // triangles
+        &:not(:last-of-type):after {
+          content: '';
+          position: absolute;
+          pointer-events: none;
+          display: inline-block;
+          width: 0;
+          height: 0;
+
+          // desktop
+          @include media_interval($steps_mobile, 0) {
+            border-top: $triangle_h / 2 solid transparent;
+            border-left: $triangle_w solid rgba($blue, 0.1);
+            border-bottom: $triangle_h / 2 solid transparent;
+            transform: translate(-50%, 50%);
+            right: -$steps_gap / 2 - $triangle_w;
+            bottom: 50%;
+          }
+          // mobile
+          @include media_interval(0, $steps_mobile) {
+            border-left: $triangle_w / 2 solid transparent;
+            border-right: $triangle_w / 2 solid transparent;
+            border-top: $triangle_h solid rgba($blue, 0.1);
+            transform: translate(-50%, -50%);
+            bottom: -$steps_gap_mobile / 2 - $triangle_h;
+            left: 50%;
+          }
+        }
+
+        .step-title {
+          font-weight: 800;
+          display: inline-block;
+          @include media_interval($steps_mobile, 0) {
+            order: 1;
+            width: 0;
+            white-space: nowrap;
+          }
+        }
+
+        .step-desc {
+          line-height: 156.5%;
+          @include font-size(14px);
+          @include media_interval($steps_mobile, 0) {
+            flex: 1 1;
+            width: 0;
+            height: 0;
+          }
+          @include media_interval(0, $steps_mobile) {
+            margin-top: 5px;
+          }
+        }
+
+        // selected step
+        &.selected {
+          background: rgba($blue, 0.05);
+          border: 1px solid rgba($blue, 0.05);
+          flex: 1 1 auto;
+
+          .step-title {
+            @include media_interval($steps_mobile, 0) {
+              width: 100%;
+            }
+          }
+
+          .step-desc {
+            @include media_interval($steps_mobile, 0) {
+              width: auto;
+              height: auto;
+              padding-left: 24px;
+            }
+            @include media_interval($media-desktop, 0) {
+              padding-left: 40px;
+              padding-right: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

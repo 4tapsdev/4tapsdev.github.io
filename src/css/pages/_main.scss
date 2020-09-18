@@ -1,0 +1,76 @@
+@import "../deps";
+
+
+// hero section
+#hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+
+  .hero-inner {
+    @include vpad(170px, 159px);
+
+    .hero-title {
+      margin-bottom: 20px;
+      max-width: 680px;
+      font-weight: 800;
+      @include font-size(63px);
+      line-height: 115.5%;
+
+      @include media_interval(400px, 0) {
+        white-space: pre;
+      }
+      @include for-phone-only() {
+        margin-right: -10px;
+      }
+      @include for-tablet-portrait-up() {
+        @include font-size(69px);
+        margin-bottom: 31px;
+      }
+      @include for-tablet-landscape-up() {
+        @include font-size(76px, 70px);
+      }
+      @include for-desktop-up() {
+        @include font-size(96px, 90px);
+      }
+
+      .hero-title-emphasis {
+        display: inline-block;
+        color: $blue;
+      }
+    }
+
+    .hero-subheader {
+      max-width: 484px;
+      font-weight: 500;
+      @include font-size(18px);
+      line-height: 179%;
+      @include for-phone-only() {
+        @include font-size(24px);
+      }
+    }
+  }
+
+  .hero-next-wrapper {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 17px;
+
+    @include for-tablet-portrait-up() {
+      bottom: 26px;
+    }
+    @include for-tablet-landscape-up() {
+      bottom: 37px;
+    }
+
+    .hero-next-link {
+      display: inline-block;
+      width: 24px;
+      height: 14px;
+    }
+  }
+}

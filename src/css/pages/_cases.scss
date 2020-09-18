@@ -1,0 +1,43 @@
+@import "../deps";
+
+
+#case-reviews {
+  margin-top: 208px;
+  margin-bottom: 40px;
+  @include for-phone-only() {
+    margin-top: 160px;
+  }
+
+  .cases-label {
+    font-weight: 800;
+    line-height: 152%;
+    @include font-size(30px);
+    margin-bottom: 25px;
+    @include for-phone-only() {
+      margin-bottom: 15px;
+    }
+    @include for-tablet-landscape-up() {
+      @include font-size(33px);
+    }
+    @include for-desktop-up() {
+      @include font-size(36px);
+    }
+  }
+
+  .case-reviews-list {
+    margin-top: 45px;
+    @include for-phone-only() {
+      margin-top: 37px;
+    }
+  }
+
+  .link-to-other {
+    color: $blue;
+    margin-top: 20px;
+    @include font-size(18px);
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

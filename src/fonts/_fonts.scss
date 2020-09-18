@@ -1,0 +1,12 @@
+@import "./GilroyExtrabold/font.css";
+@import "./GilroyMedium/font.css";
+@import "./GilroyMediumItalic/font.css";
+@import "./GilroySemibold/font.css";
+
+
+.fonts-loaded {
+  body {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+  }
+}

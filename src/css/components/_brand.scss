@@ -1,0 +1,21 @@
+@import "../deps";
+
+
+.brand-box {
+
+  .brand {
+    display: inline-block;
+
+    &.active {
+      cursor: default;
+    }
+    &:not(.active):hover {
+      opacity: 0.7;
+    }
+
+    img {
+      transform: translateZ(0); // fix chrome img blurry
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+}

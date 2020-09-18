@@ -1,0 +1,96 @@
+@import "../deps";
+
+
+$case-tile-stack: 620px;
+$case-tile-mobile: $media-tablet-landscape;
+
+
+#case-tiles {
+  margin-bottom: 90px;
+
+  .section-label {
+    @include for-tablet-landscape-up() {
+      margin-bottom: 40px;
+    }
+  }
+
+  .case-tiles-list {
+    display: grid;
+    grid-auto-columns: 1fr;
+    gap: 20px;
+    row-gap: 36px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    @include media_interval(840px, 0) {
+      @include hpad(42px);
+    }
+    @include media_interval(0, $case-tile-stack) {
+      row-gap: 26px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+  }
+}
+
+.case-tile {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  color: $black;
+
+  .case-tile-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .case-tile-inner {
+    padding: 35px 42px 51px;
+
+    @include media_interval(0, $case-tile-mobile) {
+      @include hpad($grid-gutter-width-mobile);
+      padding-bottom: 35px;
+    }
+
+    .case-tile-head {
+      display: flex;
+      align-items: center;
+      margin-bottom: 17px;
+      @include media_interval(0, $case-tile-mobile) {
+        margin-bottom: 14px;
+      }
+
+      .case-tile-icon {
+        max-width: 60px;
+        @include media_interval(0, $case-tile-mobile) {
+          max-width: 40px;
+        }
+      }
+
+      .case-tile-title {
+        font-weight: 800;
+        line-height: 152%;
+        margin-left: 22px;
+        @include font-size(22px);
+        @include media_interval(0, $case-tile-mobile) {
+          margin-left: 14px;
+        }
+        @include for-tablet-landscape-up() {
+          @include font-size(26px);
+        }
+        @include for-desktop-up() {
+          @include font-size(32px);
+        }
+      }
+    }
+  }
+
+  .case-tile-desc {
+    @include font-size(16px, 24px);
+  }
+}

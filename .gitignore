@@ -1,0 +1,10 @@
+# Editor configs
+/.idea
+*.orig
+
+# Development configuration
+/.env
+/artifacts
+/node_modules
+/dist
+/tmp

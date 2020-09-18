@@ -1,0 +1,53 @@
+@import "../deps";
+
+
+.btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 230px;
+  padding: 15px 32px;
+  z-index: 1;
+  border: 0;
+  @include font-size(20px, 20px);
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  text-align: center;
+  border-radius: 66px;
+
+  @include for-phone-only() {
+    @include font-size(18px);
+  }
+
+  &:hover:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &.btn-border {
+    color: $blue;
+    border: 2px solid $blue;
+    background-color: transparent;
+    //transition: background-color .1s ease-out;
+
+    &:hover {
+      opacity: .8;
+    }
+    &:active:not(:disabled) {
+
+    }
+  }
+
+  &.btn-filled {
+    color: $white;
+    background-color: $blue;
+
+    &:hover {
+      opacity: .8;
+    }
+    &:active:not(:disabled) {
+
+    }
+  }
+}

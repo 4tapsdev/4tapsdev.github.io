@@ -1,0 +1,30 @@
+@import "../../deps";
+
+
+#cases-section {
+  padding-bottom: 90px;
+  @include for-tablet-landscape-up() {
+    padding-bottom: 79px;
+  }
+
+  .cases-inner {
+    .plain-text {
+      font-weight: 500;
+    }
+
+    .cases {
+      margin-top: 40px;
+      @include for-phone-only() {
+        margin-top: 37px;
+      }
+    }
+
+    .button-wrapper {
+      margin-top: 25px;
+      text-align: center;
+      @include for-tablet-landscape-up() {
+        margin-top: 39px;
+      }
+    }
+  }
+}

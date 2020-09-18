@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./gilroy-semibold.woff2') format('woff2'),
+         url('./gilroy-semibold.woff') format('woff'),
+         url('./gilroy-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

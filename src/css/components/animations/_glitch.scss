@@ -1,0 +1,148 @@
+@import "../../deps";
+
+
+$steps: 20;
+
+$title_h: 180px;
+$title-emphasis_h: 120px;
+
+
+@keyframes noise-anim {
+  @for $i from 0 through $steps {
+    //#{percentage($i*(1/$steps))} {
+    //  $top: random(100);
+    //  $bottom: random(100 - $top);
+    //  clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+    //}
+
+    #{percentage($i / $steps)} {
+      //$top: floor(percentage(random()));
+      //$bottom: (100 - random(101 - $top)) * 1%;
+      //clip-path: polygon(0% $top, 100% $top, 100% $bottom, 0 $bottom);
+
+      //clip-path: polygon(
+      //        0% floor(percentage(random())),
+      //        100% floor(percentage(random())),
+      //        100% floor(percentage(random())),
+      //        0 floor(percentage(random())));
+
+      clip: rect(random($title_h) + px, auto, random($title_h) + px, 0);
+    }
+  }
+}
+
+@keyframes noise-anim-2 {
+  @for $i from 0 through $steps {
+    //#{percentage($i*(1/$steps))} {
+    //  $top: random(100);
+    //  $bottom: random(100 - $top);
+    //  clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+    //}
+
+    #{percentage($i / $steps)} {
+      //$top: floor(percentage(random()));
+      //$bottom: (100 - random(101 - $top)) * 1%;
+      //clip-path: polygon(0% $top, 100% $top, 100% $bottom, 0 $bottom);
+
+      //clip-path: polygon(
+      //        0% floor(percentage(random())),
+      //        100% floor(percentage(random())),
+      //        100% floor(percentage(random())),
+      //        0 floor(percentage(random())));
+
+      clip: rect(random($title_h) + px, auto, random($title_h) + px, 0);
+    }
+  }
+}
+
+@keyframes noise-anim-3 {
+  @for $i from 0 through $steps {
+    #{percentage($i / $steps)} {
+      clip: rect(random($title-emphasis_h) + px, auto, random($title-emphasis_h) + px, 0);
+    }
+  }
+}
+@keyframes noise-anim-4 {
+  @for $i from 0 through $steps {
+    #{percentage($i / $steps)} {
+      clip: rect(random($title-emphasis_h) + px, auto, random($title-emphasis_h) + px, 0);
+    }
+  }
+}
+
+.glitch-area {
+
+  // base
+  .glitch {
+    position: relative;
+    user-select: none;
+
+    &:before, &:after {
+      transition: opacity .2s;
+      opacity: 0;
+    }
+    &:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 2px;
+      overflow: hidden;
+    }
+    &:before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: -2px;
+      overflow: hidden;
+    }
+
+    // types
+    &.glitch-black {
+      &:after {
+        //text-shadow: -1px 0 $white;
+        text-shadow: -1px 0 rgba(#E91E63, .8);
+      }
+      &:before {
+        text-shadow: 1px 0 $white;
+        //text-shadow: 1px 0 $blue;
+      }
+    }
+    &.glitch-blue {
+      &:after {
+        text-shadow: -1px 0 $white;
+        //text-shadow: -1px 0 yellow;
+        //text-shadow: -1px 0 cyan;
+      }
+      &:before {
+        text-shadow: 1px 0 $white;
+        //text-shadow: 1px 0 rgba(#E91E63, .8);
+      }
+    }
+  }
+
+  @at-root .can-hover &:hover {
+    .glitch {
+      &:before, &:after {
+        opacity: 1;
+      }
+    }
+
+    .glitch-black {
+      &:after {
+        animation: noise-anim 2s infinite linear alternate-reverse;
+      }
+      &:before {
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+      }
+    }
+
+    .glitch-blue {
+      &:after {
+        animation: noise-anim-3 2s infinite linear alternate-reverse;
+      }
+      &:before {
+        animation: noise-anim-4 3s infinite linear alternate-reverse;
+      }
+    }
+  }
+}
