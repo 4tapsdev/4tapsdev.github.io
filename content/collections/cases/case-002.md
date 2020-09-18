@@ -7,7 +7,7 @@ background: "rgba(239, 190, 28, 0.15)"
 show_in_review_block: "Yes"
 reviewer: Alex Bloomingdale
 reviewer_position: co-founder of eNotes
-review_body: eNotes for more than 20 years has been listed in Alexa’s top-1000 websites in the world. We  specialize in lesson plans and study guides also providing the Homework Help section with millions of questions with answers. eNotes needed a partner to launch native iOS and Android applications who can cover the whole mobile experience
+review_body: eNotes for more than 20 years has been listed in Alexa’s top-1000 websites in the world. We  specialize in lesson plans and study guides also providing the Homework Help section with millions of questions with answers. eNotes needed a partner to launch native iOS and Android applications who can cover the whole mobile experience – code, design, figure out in-app purchases, push notifications and more. 4Taps executed all that brilliantly. Highly recommended!
 website: 
 appstore: "https://apps.apple.com/us/app/enotes/id538489509"
 googleplay: "https://play.google.com/store/apps/details?id=com.enotes.app"

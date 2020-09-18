@@ -1,6 +1,45 @@
+# OS X temporary files that should never be committed
+.DS_Store
+.Trashes
+*.swp
+*.lock
+profile
+
 # Editor configs
+
+# jetbrains
 /.idea
 *.orig
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+# Xcode temporary files that should never be committed
+*~.nib
+
+# Xcode build files
+DerivedData/
+build/
+Builds/
+
 
 # Development configuration
 /.env
