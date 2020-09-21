@@ -74,11 +74,30 @@ export default (props) => {
         }
       `;
 
+    // yandex metrika
     const ym = `
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; 
         m[i].l=1*new Date();
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); 
         ym(27302507, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); 
+      `;
+
+    // facebook Messenger
+    const fm = `
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+          });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
       `;
 
     return (
@@ -97,6 +116,14 @@ export default (props) => {
             </Head>
             <Body>
                 {children}
+
+                <div id="fb-root" />
+                <Safe.script>{fm}</Safe.script>
+                <div className="fb-customerchat"
+                     attribution="setup_tool"
+                     page_id="273965832946920"
+                     greeting_dialog_display="hide"
+                     theme_color="#0094ff" />
             </Body>
         </Html>
     )
