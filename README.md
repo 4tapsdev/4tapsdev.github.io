@@ -3,7 +3,7 @@
 Project install. Be sure that you have the latest node and npm installed, then clone this repository and run:
 
 ```bash
-git clone https://github.com/4tapsdev/4tapsdev.github.io.git
+git clone git@github.com:4tapsdev/4tapsdev.github.io.git
 npm install
 ```
 
@@ -26,7 +26,7 @@ To run a production build for deployment:
 npm run build
 ```
 
-Deploy, may require entering a username and password from the github:
+Deploy, may require entering a username and password from the github, if you cloned the repository via https:
 
 ```bash
 npm run deploy

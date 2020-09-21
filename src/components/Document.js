@@ -121,7 +121,8 @@ export default (props) => {
                 <Safe.script>{fm}</Safe.script>
                 <div className="fb-customerchat"
                      attribution="setup_tool"
-                     page_id="100704918464990"
+                     page_id="273965832946920"
+                     greeting_dialog_display="hide"
                      theme_color="#0094ff" />
             </Body>
         </Html>
