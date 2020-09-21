@@ -56,7 +56,7 @@ $case_stack: 620px;
       box-sizing: border-box;
       @include media_interval($case_stack, 0) {
         width: 50%;
-        margin-bottom: 50px;
+        margin-bottom: 35px;
       }
       @include media_interval($media-desktop, 0) {
         padding-right: 20px;
@@ -183,12 +183,9 @@ $case_stack: 620px;
         margin-top: 34px;
       }
 
-      .store + .website {
-        margin-top: 15px;
-      }
-
       .website {
         width: 100%;
+        margin-bottom: 15px;
         @include font-size(16px);
         @include for-tablet-landscape-up() {
           @include font-size(18px);
@@ -205,8 +202,14 @@ $case_stack: 620px;
 
       .store {
         margin-right: 15px;
+        margin-bottom: 15px;
+        height: 41px;
         &:last-of-type {
           margin-right: 0;
+        }
+
+        img {
+          height: 100%;
         }
       }
     }

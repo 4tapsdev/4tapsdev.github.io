@@ -17,10 +17,10 @@ export default () => {
                     <div className="contact-box">
                         <div className="phones">
                             {phoneLA &&
-                            <a href={`tel:+1${cleanPhone(phoneLA)}`} className="phone">{`+1 ${phoneLA}`}</a>}
+                            <a href={`tel:+${cleanPhone(phoneLA)}`} className="phone">{phoneLA}</a>}
 
                             {phoneMoscow &&
-                            <a href={`tel:+7${cleanPhone(phoneMoscow)}`} className="phone">{`+7 ${phoneMoscow}`}</a>}
+                            <a href={`tel:+${cleanPhone(phoneMoscow)}`} className="phone">{phoneMoscow}</a>}
                         </div>
 
                         <span>{"    •    "}</span>

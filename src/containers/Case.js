@@ -7,9 +7,6 @@ import CaseTile from "../components/CaseTile";
 import routes from "../constants/routes";
 import { shuffle } from "../utils/helpers";
 
-import appStore from "../images/appstore.png";
-import googlePlay from "../images/googleplay.png";
-
 
 export default function Case() {
     const { page, tiles_block, cases } = useRouteData();
@@ -48,12 +45,12 @@ export default function Case() {
 
                                 <div className="case-links-box">
                                     {page.appstore &&
-                                    <a href={page.appstore} className="store" target="_blank" rel="noreferrer">
-                                        <img className="app-store" src={appStore} alt="app store" />
+                                    <a href={page.appstore} className="store app-store" target="_blank" rel="noreferrer">
+                                        <img src="/images/appstore.png" alt="app store" />
                                     </a>}
                                     {page.appstore &&
-                                    <a href={page.googleplay} className="store" target="_blank" rel="noreferrer">
-                                        <img className="google-play" src={googlePlay} alt="google play" />
+                                    <a href={page.googleplay} className="store google-play" target="_blank" rel="noreferrer">
+                                        <img src="/images/googleplay.png" alt="google play" />
                                     </a>}
                                     {page.website &&
                                     <div className="website">
