@@ -10,9 +10,10 @@ export default ({ block, cases }) => {
         <section id="cases-section">
             <div className="container">
                 <div className="cases-inner">
-                    <div className="inner-padding">
+                    <div className="inner-padding text-container">
                         <h2 className="section-label">{block.title}</h2>
-                        <p className="plain-text">{block.desc}</p>
+                        {block.desc &&
+                        <p className="plain-text">{block.desc}</p>}
                     </div>
 
                     <ul className="cases">

@@ -23,8 +23,6 @@ export default () => {
                             <a href={`tel:+${cleanPhone(phoneMoscow)}`} className="phone">{phoneMoscow}</a>}
                         </div>
 
-                        <span>{"    •    "}</span>
-
                         <a href={`mailto:${email}`} className="email">{email}</a>
                     </div>
                     <Brand />

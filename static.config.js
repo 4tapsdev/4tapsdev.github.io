@@ -47,7 +47,7 @@ async function getRoutes() {
                 template: 'src/containers/Case',
                 getData: () => ({
                     page: caseObj,
-                    tiles_block: content.blocks.tiles,
+                    tiles_block: content.blocks.caseTiles,
                 }),
                 sharedData: {
                     cases,
