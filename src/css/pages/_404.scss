@@ -1,0 +1,41 @@
+@import "../deps";
+
+
+$wide_pad: 80px;
+$tablet_pad: 60px;
+$mobile_pad: 40px;
+
+.short-page {
+  box-sizing: border-box;
+  @include vpad(180px, $wide_pad);
+  @include media_interval($media-tablet-landscape, $media-desktop) {
+    @include vpad(180px, $tablet_pad);
+  }
+  @include media_interval(0, $media-tablet-landscape) {
+    @include vpad(160px, $mobile_pad);
+  }
+
+  .centrize-container {
+    text-align: center;
+    @include media_interval(0, $media-tablet-landscape) {
+      max-width: 440px;
+    }
+  }
+
+  .title-404 {
+    color: $blue;
+    @include font-size(65px, 65px);
+    margin-bottom: 34px;
+    @include media_interval($media-desktop, $media-big-desktop) {
+      @include font-size(55px);
+    }
+    @include media_interval($media-tablet-portrait, $media-desktop) {
+      @include font-size(50px);
+      margin-bottom: 30px;
+    }
+    @include media_interval(0, $media-tablet-portrait) {
+      @include font-size(40px);
+      margin-bottom: 23px;
+    }
+  }
+}
