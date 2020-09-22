@@ -24,6 +24,7 @@ $case_stack: 620px;
 
       .case-head-back {
         display: flex;
+        align-items: center;
         cursor: pointer;
 
         &:hover {
@@ -84,6 +85,7 @@ $case_stack: 620px;
       .case-img {
         position: relative;
         transform: translateZ(0); // fix img blurry
+        image-rendering: -webkit-optimize-contrast; // fix chrome img blurry
 
         @include media_interval($case_stack, 0) {
           max-width: initial;

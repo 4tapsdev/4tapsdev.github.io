@@ -1,6 +1,10 @@
 @import "../deps";
 
 
+$dots_w: 22px;
+$text_w: 64px;
+
+
 #app-header {
   position: absolute;
   top: $header_top_offset_tablet;
@@ -35,17 +39,19 @@
       &:before, &:after {
         content: '';
         display: inline-block;
-        height: 23.8px;
-        background-image: url("/images/brand.svg");
-        background-repeat: no-repeat;
+        height: $brand_h;
+        background: url("/images/brand.svg") no-repeat;
       }
       &:before {
-        width: 21.95px;
+        width: $dots_w;
+        background-position: rel-background-position($dots_w, $brand_h, 0px, 0px, $brand_w, $brand_h);
+        background-size: rel-background-size($dots_w, $brand_h);
       }
       &:after {
+        width: $text_w;
         margin-left: 15.54px;
-        width: 64px;
-        background-position-x: -37.49px;
+        background-position: rel-background-position($text_w, $brand_h, -37px, 0px, $brand_w, $brand_h);
+        background-size: rel-background-size($text_w, $brand_h);
         transition: transform .2s, opacity .2s;
 
         @include media_interval($media-tablet-landscape, 0) {
