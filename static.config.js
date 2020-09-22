@@ -6,7 +6,7 @@ import Document from "./src/components/Document";
 import routes from "./src/constants/routes";
 import getContent from "./src/utils/content";
 import { processMarkdown, prepareCases } from "./src/utils/localData";
-import { SITE_ROOT, BRAND_URL } from "./src/constants/conf";
+import { SITE_ROOT } from "./src/constants/conf";
 
 
 async function getRoutes() {

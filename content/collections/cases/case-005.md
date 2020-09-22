@@ -11,7 +11,7 @@ review_body:
 website: "https://adapty.io/"
 appstore: 
 googleplay: 
-icon: /images/cases/icons/clutchpoints.png
+icon: /images/cases/icons/adapty.png
 image_page:
   - path: /images/cases/pages/adapty/x1.png
   - path: /images/cases/pages/adapty/x2.png

@@ -11,7 +11,7 @@ review_body: Cherry Labs sticks to the “Move fast and break things” rule rel
 website: "https://www.cherrypro.ai/"
 appstore: 
 googleplay: 
-icon: /images/cases/icons/clutchpoints.png
+icon: /images/cases/icons/cherry.png
 image_page:
   - path: /images/cases/pages/cherry/x1.png
   - path: /images/cases/pages/cherry/x2.png
