@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Safe from "react-safe";
 
 import { cleanObj } from "../utils/helpers";
 import routes from "../constants/routes";
+
+
+const environment = process.env.NODE_ENV;
+const production = environment === 'production';
 
 
 const renderMeta = (siteData, routeInfo) => {
@@ -11,7 +15,7 @@ const renderMeta = (siteData, routeInfo) => {
     }
 
     if (routeInfo.data.page) {
-    // if (routeInfo.path === routes.home && routeInfo.data.page) {
+        // if (routeInfo.path === routes.home && routeInfo.data.page) {
         const pageData = cleanObj(Object.assign({}, routeInfo.data.page));
         const mergedData = Object.assign({}, siteData, pageData);
         return (
@@ -112,18 +116,23 @@ export default (props) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
                 <Safe.script>{fonts_js}</Safe.script>
-                <Safe.script>{ym}</Safe.script>
+
+                {production &&
+                <Safe.script>{ym}</Safe.script>}
             </Head>
             <Body>
                 {children}
 
-                <div id="fb-root" />
-                <Safe.script>{fm}</Safe.script>
-                <div className="fb-customerchat"
-                     attribution="setup_tool"
-                     page_id="273965832946920"
-                     greeting_dialog_display="hide"
-                     theme_color="#0094ff" />
+                {production &&
+                <Fragment>
+                    <div id="fb-root" />
+                    <Safe.script>{fm}</Safe.script>
+                    <div className="fb-customerchat"
+                         attribution="setup_tool"
+                         page_id="273965832946920"
+                         greeting_dialog_display="hide"
+                         theme_color="#0094ff" />
+                </Fragment>}
             </Body>
         </Html>
     )
