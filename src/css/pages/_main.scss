@@ -17,12 +17,16 @@
       margin-bottom: 20px;
       max-width: 680px;
       font-weight: 800;
+      white-space: break-spaces;
       @include font-size(63px);
       line-height: 115.5%;
 
-      @include media_interval(400px, 0) {
-        white-space: pre;
+      &:before, &:after {
+        display: inline-block;
+        white-space: break-spaces;
+        width: 100%;
       }
+
       @include for-phone-only() {
         margin-right: -10px;
       }
