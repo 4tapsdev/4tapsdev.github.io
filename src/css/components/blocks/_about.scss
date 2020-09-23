@@ -1,6 +1,9 @@
 @import "../../deps";
 
 
+$media-specialties-stack: 860px;
+
+
 #about-section {
   @include vpad(29px, 70px);
   @include for-tablet-portrait-up() {
@@ -87,7 +90,7 @@
       grid-template-rows: auto;
       gap: 16px;
 
-      @include media_interval(0, $media-tablet-landscape) {
+      @include media_interval(0, $media-specialties-stack) {
         row-gap: 58px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -144,8 +147,10 @@
           color: rgba(34, 34, 34, 0.54);
           max-width: 174px;
           text-align: center;
-          @include media_interval(0, $media-tablet-landscape) {
-            display: none;
+          @include media_interval(0, $media-tablet-portrait) {
+            max-width: 115px;
+            @include font-size(13px);
+            margin-top: 7px;
           }
         }
       }
