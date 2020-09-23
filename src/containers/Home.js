@@ -47,8 +47,7 @@ export default () => {
     }, []);
 
     const animateArrow = () => {
-        if (!animeRef.current || !arrowRef.current) return;
-
+        if (!animeRef.current || animeRef.began || !arrowRef.current) return;
         animeRef.current.play();
     };
 

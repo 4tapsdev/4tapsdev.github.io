@@ -9,11 +9,11 @@ import routes from "../constants/routes";
 
 
 export default () => {
-    const [isTop, setIsTop] = useState(typeof window !== 'undefined' ? window.scrollY === 0 : true);
+    const [isTop, setIsTop] = useState(typeof window !== 'undefined' ? window.scrollY <= 0 : true);
 
     useScrollPosition(
         ({ prevPos, currPos }) => {
-            const currentIsTop = currPos.y === 0 || (currPos.y < 100 && prevPos.y > currPos.y);
+            const currentIsTop = currPos.y <= 0 || (currPos.y < 100 && prevPos.y > currPos.y);
             if (currentIsTop !== isTop) setIsTop(currentIsTop)
         },
         [isTop],
@@ -29,7 +29,7 @@ export default () => {
                     {/*<Brand />*/}
 
                     <div className="brand-box">
-                        <ExactNavLink className="brand" to={routes.home}></ExactNavLink>
+                        <ExactNavLink className="brand" to={routes.home} />
                     </div>
 
                     <div className="menu-box">
