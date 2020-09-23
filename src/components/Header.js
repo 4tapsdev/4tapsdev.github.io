@@ -9,7 +9,7 @@ import routes from "../constants/routes";
 
 
 export default () => {
-    const [isTop, setIsTop] = useState(typeof window !== 'undefined' ? window.scrollY === 0 : false);
+    const [isTop, setIsTop] = useState(typeof window !== 'undefined' ? window.scrollY === 0 : true);
 
     useScrollPosition(
         ({ prevPos, currPos }) => {

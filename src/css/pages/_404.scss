@@ -1,25 +1,18 @@
 @import "../deps";
 
 
-$wide_pad: 80px;
-$tablet_pad: 60px;
-$mobile_pad: 40px;
-
 .short-page {
   box-sizing: border-box;
-  @include vpad(180px, $wide_pad);
+  @include vpad(280px, 180px);
   @include media_interval($media-tablet-landscape, $media-desktop) {
-    @include vpad(180px, $tablet_pad);
+    @include vpad(220px, 120px);
   }
   @include media_interval(0, $media-tablet-landscape) {
-    @include vpad(160px, $mobile_pad);
+    @include vpad(180px, 80px);
   }
 
-  .centrize-container {
+  .inner-padding {
     text-align: center;
-    @include media_interval(0, $media-tablet-landscape) {
-      max-width: 440px;
-    }
   }
 
   .title-404 {
