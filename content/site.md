@@ -1,5 +1,5 @@
 ---
-meta_title: 4taps
+meta_title: 4Taps – vetted iOS and Android devs helping you launch your product fast
 meta_desc: 4Taps – vetted iOS and Android devs helping you launch your product fast
 twitter_title: 4taps
 twitter_desc: 4Taps – vetted iOS and Android devs helping you launch your product fast
