@@ -1,11 +1,11 @@
 ---
-title: 4taps
-desc: 4Taps – your technology partner in mobile, AR and machine learning
+meta_title: 4taps
+meta_desc: 4Taps – vetted iOS and Android devs helping you launch your product fast
 twitter_title: 4taps
-twitter_desc: 4Taps – your technology partner in mobile, AR and machine learning
+twitter_desc: 4Taps – vetted iOS and Android devs helping you launch your product fast
 twitter_image_url: https://4taps.me/images/brand.svg
 og_title: 4taps
-og_desc: 4Taps – your technology partner in mobile, AR and machine learning
+og_desc: 4Taps – vetted iOS and Android devs helping you launch your product fast
 og_url: https://4taps.me
 og_image_url: https://4taps.me/images/brand.svg
 og_image_type: image/svg

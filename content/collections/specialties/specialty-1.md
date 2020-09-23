@@ -1,5 +1,5 @@
 ---
 title: mobile dev
 icon_class: icon-mobile
-trend: iOS, Android
+trend: Native iOS/Android on Obj-C, Swift, Kotlin, Java. React Native, Flutter
 ---

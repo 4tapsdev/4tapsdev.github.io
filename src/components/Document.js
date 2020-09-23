@@ -20,8 +20,8 @@ const renderMeta = (siteData, routeInfo) => {
         const mergedData = Object.assign({}, siteData, pageData);
         return (
             <React.Fragment>
-                <title>{mergedData.title}</title>
-                <meta name="description" content={mergedData.desc} />
+                <title>{mergedData.meta_title}</title>
+                <meta name="description" content={mergedData.meta_desc} />
 
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={mergedData.og_title} />
