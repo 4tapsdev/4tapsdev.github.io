@@ -1,6 +1,7 @@
 import path from "path";
+import chokidar from "chokidar";
 // import axios from "axios";
-import { createSharedData } from "react-static/node";
+import { rebuildRoutes, createSharedData } from "react-static/node";
 
 import Document from "./src/components/Document";
 import routes from "./src/constants/routes";
@@ -8,6 +9,11 @@ import getContent from "./src/utils/content";
 import { processMarkdown, prepareCases } from "./src/utils/localData";
 import { SITE_ROOT } from "./src/constants/conf";
 
+
+const environment = process.env.NODE_ENV;
+if (environment === 'development') {
+    chokidar.watch('./content').on('all', () => rebuildRoutes());
+}
 
 async function getRoutes() {
     const content = await getContent();
