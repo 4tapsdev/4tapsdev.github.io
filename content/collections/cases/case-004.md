@@ -1,12 +1,12 @@
 ---
-visible: "Yes"
+visible: "No"
 title: Mercuryo
-short_desc: Cherry Labs is a Palo-Alto-based startup building an AI system capable of converting video streams with humans into actionable data.
-desc: 4Taps created apps for each platform. Each game's social stream is the new way to follow live sports on-the-go, even if the user is away from the TV.
+short_desc: Mercuryo is a fully licensed European crypto wallet service which allows you to exchange your cryptocurrency in a few clicks.
+desc: Buy btc, eth, usdt, trx, okb and algo with a bank card
 background: "#F4EEE7"
 show_in_review_block: "No"
 reviewer: Nish Patel
-reviewer_position: Founder and CEO of ClutchPoints
+reviewer_position: CEO of Mercuryo
 review_body: 
 website: 
 appstore: "https://apps.apple.com/app/mercuryo-exchange-btc/id1446533733"

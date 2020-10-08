@@ -1,12 +1,12 @@
 ---
-visible: "Yes"
+visible: "No"
 title: Adapty
 short_desc: SDK helping to grow and automate in-app subscriptions
-desc: 4Taps created apps for each platform. Each game's social stream is the new way to follow live sports on-the-go, even if the user is away from the TV.
+desc: Adapty is a service for analyzing and growing mobile in-app subscriptions. Use Adapty for paywalls A/B testing, measuring economy and customers promotion.
 background: "rgba(0, 0, 0, 0.05)"
 show_in_review_block: "No"
-reviewer: Nish Patel
-reviewer_position: Founder and CEO of ClutchPoints
+reviewer: Vitaly Davydov
+reviewer_position: CEO of Adapty
 review_body: 
 website: "https://adapty.io/"
 appstore: 
