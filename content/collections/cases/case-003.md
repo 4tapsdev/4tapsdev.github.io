@@ -23,3 +23,9 @@ image_review_mobile:
   - path: /images/cases/reviews/cherry/mobile/x2.png
 image_review_mobile_centrize: "Yes"
 ---
+## Objective
+The objective was to create real-time AI video monitoring and analytics for the modern workplace. Our main goal was to convert any human activity into data and stats, also implement real-time emergency prevention and AI monitoring.
+
+## Result
+For now Cherry Pro delivers best-in-class AI recognition along with human validation by our operators. Impressive 97.6% accuracy of tracking and recognition is achieved on average.
+Cherry Pro can build a map of when, where, and who is doing which activity; recognize workers by face, clothing or body parameters; detect and prevent falls and injuries.

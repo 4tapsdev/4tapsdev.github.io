@@ -23,3 +23,8 @@ image_review_mobile:
   - path: /images/cases/reviews/enotes/mobile/x2.png
 image_review_mobile_centrize: "No"
 ---
+## Objective
+Enotes is a perfect education service and our objective was to fit all accumulated knowledge and educational experience of the eNotes team in one app and give users access and a suitable way to get this experience. It is mostly a text app and it is very important not to overload user attention and give content piece by piece.
+
+## Result
+This app is a good example of how important it is to pay attention to user-flow and understand the user requirements. To make a perfect app we reduced all unneeded and focused only on the most important: study cases, quizzes, and ability to challenge a teacher. In 2020 we slightly updated the design so it matches the site. 
