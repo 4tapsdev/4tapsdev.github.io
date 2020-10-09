@@ -1,5 +1,5 @@
 ---
-visible: "No"
+visible: "Yes"
 title: Adapty
 short_desc: SDK helping to grow and automate in-app subscriptions
 desc: Adapty is a service for analyzing and growing mobile in-app subscriptions. Use Adapty for paywalls A/B testing, measuring economy and customers promotion.
