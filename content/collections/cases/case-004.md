@@ -1,5 +1,5 @@
 ---
-visible: "No"
+visible: "Yes"
 title: Mercuryo
 short_desc: Mercuryo is a fully licensed European crypto wallet service which allows you to exchange your cryptocurrency in a few clicks.
 desc: Buy btc, eth, usdt, trx, okb and algo with a bank card
