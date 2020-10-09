@@ -7,7 +7,7 @@ background: "rgba(0, 0, 0, 0.05)"
 show_in_review_block: "No"
 reviewer: Vitaly Davydov
 reviewer_position: CEO of Adapty
-review_body: 
+review_body: As a result of 4Taps’s work, the client has functional SDKs that have a 0.1% crash rate. The team is knowledgeable and has a deep understanding of their field. Customers can expect a motivated and organized team. 
 website: "https://adapty.io/"
 appstore: 
 googleplay: 
