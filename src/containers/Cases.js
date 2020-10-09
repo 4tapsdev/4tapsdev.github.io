@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 // import BackLink from "../components/BackLink";
 // import ContactBlock from "../components/blocks/Contact";
 import CaseReview from "../components/CaseReview";
-// import CaseTile from "../components/CaseTile";
+import CaseTile from "../components/CaseTile";
 
 
 export default function Cases() {
@@ -30,6 +30,18 @@ export default function Cases() {
                                 )
                             })}
                         </ul>
+                    </div>
+                </div>
+
+                <div id="case-tiles">
+                    <div className="container">
+                        <ul className="case-tiles-list">
+                            {cases.filter(caseObj => !caseObj.show_in_review_block).map(caseData => {
+                                return (
+                                    <CaseTile {...caseData} key={caseData.title} />
+                                )
+                            })}
+                        </ul>
 
                         <div className="text-container inner-padding">
                             <a className="link-to-other"
@@ -39,18 +51,6 @@ export default function Cases() {
                         </div>
                     </div>
                 </div>
-
-                {/*<div id="case-tiles">*/}
-                {/*    <div className="container">*/}
-                {/*        <ul className="case-tiles-list">*/}
-                {/*            {cases.filter(caseObj => !caseObj.show_in_review_block).map(caseData => {*/}
-                {/*                return (*/}
-                {/*                    <CaseTile {...caseData} key={caseData.title} />*/}
-                {/*                )*/}
-                {/*            })}*/}
-                {/*        </ul>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
 
                 {/*<ContactBlock />*/}
                 {/*<BackLink />*/}

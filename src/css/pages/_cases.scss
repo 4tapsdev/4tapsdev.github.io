@@ -30,14 +30,14 @@
       margin-top: 37px;
     }
   }
+}
 
-  .link-to-other {
-    color: $blue;
-    margin-top: 20px;
-    @include font-size(18px);
+.link-to-other {
+  color: $blue;
+  margin-top: 20px;
+  @include font-size(18px);
 
-    &:hover {
-      opacity: .7;
-    }
+  &:hover {
+    opacity: .7;
   }
 }
