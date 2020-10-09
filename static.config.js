@@ -85,7 +85,7 @@ export default {
         [
             require.resolve('react-static-plugin-favicons'),
             {
-                inputFile: path.resolve(__dirname, './public/images/favicon.svg'),
+                inputFile: path.resolve(__dirname, './public/images/favicon.png'),
                 outputDir: path.join(__dirname, 'dist', 'favicon'),
                 configuration: {
                     path: '/favicon',
